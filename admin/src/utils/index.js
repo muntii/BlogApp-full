@@ -6,7 +6,8 @@ import {
 } from "firebase/storage";
 import { app } from "./firebase";
 
-export const API_URI = "http://localhost:8800";
+//export const API_URI = "http://localhost:8800";
+export const API_URI = "https://blog-app-server-bice.vercel.app";
 
 export const uploadFile = (setFileURL, file) => {
   const storage = getStorage(app);
@@ -54,7 +55,7 @@ export function formatNumber(num) {
 }
 
 export function getInitials(fullName) {
-  const names = fullName.split(" "); //code wave asante
+  const names = fullName.split(" ");
 
   const initials = names.slice(0, 2).map((name) => name[0].toUpperCase());
 
