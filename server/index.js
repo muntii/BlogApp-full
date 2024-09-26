@@ -1,5 +1,5 @@
 import bodyParser from "body-parser";
-import cors from "cors";
+//import cors from "cors";
 import dotenv from "dotenv";
 import express from "express";
 import helmet from "helmet";
@@ -17,7 +17,6 @@ const PORT = process.env.PORT || 8800;
 dbConnection();
 
 app.use(helmet());
-app.use(cors());
 app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', 'https://blog-app-writer.vercel.app');
   res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
