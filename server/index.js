@@ -17,7 +17,10 @@ const PORT = process.env.PORT || 8800;
 dbConnection();
 
 app.use(helmet());
-app.use(cors());
+app.use(cors({
+  origin: ["https://blog-app-writer.vercel.app/"],
+  credentials: true
+}));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json({ limit: "10mb" }));
