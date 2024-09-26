@@ -18,7 +18,7 @@ dbConnection();
 
 app.use(helmet());
 app.use(cors({
-  origin: ["https://blog-app-writer.vercel.app/"],
+  origin: ["*"],
   credentials: true
 }));
 app.use(bodyParser.json());
