@@ -1,5 +1,5 @@
 import bodyParser from "body-parser";
-//import cors from "cors";
+import cors from "cors";
 import dotenv from "dotenv";
 import express from "express";
 import helmet from "helmet";
@@ -21,7 +21,7 @@ app.get("/", (req, res) => res.send("Express on Vercel"));
 
 app.use(helmet());
 app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', 'https://blog-app-writer.vercel.app');
+  res.header('Access-Control-Allow-Origin', 'https://blog-app-client-steel.vercel.app');
   res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
   res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
   next();
