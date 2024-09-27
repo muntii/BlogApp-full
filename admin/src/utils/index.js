@@ -6,7 +6,7 @@ import {
 } from "firebase/storage";
 import { app } from "./firebase";
 
-//export const API_URI = "http://localhost:8800";
+// export const API_URI = "http://localhost:8800";
 export const API_URI = "https://blog-app-api-blond.vercel.app";
 
 export const uploadFile = (setFileURL, file) => {
