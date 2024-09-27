@@ -16,6 +16,9 @@ const PORT = process.env.PORT || 8800;
 
 dbConnection();
 
+app.get("/", (req, res) => res.send("Express on Vercel"));
+
+
 app.use(helmet());
 app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', 'https://blog-app-writer.vercel.app');
