@@ -55,7 +55,7 @@ export const usePopularPosts = () => {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const { data } = await axios.get(`${API_URL}/posts/popular`)
+        const { data } = await axios.get(`${API_URL}/post/popular`)
         setPopular(data?.data)
       } catch (error) {
         toast.error("Something went wrong.")
