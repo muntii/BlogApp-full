@@ -27,7 +27,7 @@ export const usePosts = ({ writerId }) => {
       setIsLoading(true);
 
       try {
-        const { data } = await axios.get(`${API_URL}/post?cat=${category}&page=${page}&writerId=${writerId || ""}`);
+        const { data } = await axios.get(`${API_URL}posts?cat=${category}&page=${page}&writerId=${writerId || ""}`);
 
         setPosts(data?.data || [])
         setNumOfPages(data?.numOfPages)
@@ -55,7 +55,7 @@ export const usePopularPosts = () => {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const { data } = await axios.get(`${API_URL}/post/popular`)
+        const { data } = await axios.get(`${API_URL}posts/popular`)
         setPopular(data?.data)
       } catch (error) {
         toast.error("Something went wrong.")
