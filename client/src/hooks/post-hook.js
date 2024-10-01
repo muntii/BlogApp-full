@@ -4,7 +4,7 @@ import { toast } from 'sonner'
 import axios from 'axios'
 import { useEffect, useState } from 'react'
 import { updateURL } from '../utils/index'
-import { API_URL } from "../utils/apiCalls"
+import { API_URL } from "../utils/apiCalls.js"
 
 export const usePosts = ({ writerId }) => {
   const { setIsLoading } = useStore()
