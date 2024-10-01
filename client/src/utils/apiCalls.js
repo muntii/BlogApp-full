@@ -1,7 +1,7 @@
 
 import axios from "axios";
 
-// export const API_URL = "http://localhost:8800"
+//export const API_URL = "http://localhost:8800"
 export const API_URL = "https://blog-app-api-blond.vercel.app";
 
 export const getGoogleSignUp = async (accessToken) => {
