@@ -4,7 +4,7 @@ import { toast } from 'sonner'
 import axios from 'axios'
 import { useEffect, useState } from 'react'
 import { updateURL } from '../utils/index'
-import { API_URL } from "../utils/apiCalls.js"
+import { API_URL } from "../utils/apiCalls"
 
 export const usePosts = ({ writerId }) => {
   const { setIsLoading } = useStore()
@@ -27,7 +27,7 @@ export const usePosts = ({ writerId }) => {
       setIsLoading(true);
 
       try {
-        const { data } = await axios.get(`${API_URL}/posts?cat=${category}&page=${page}&writerId=${writerId || ""}`);
+        const { data } = await axios.get(`${API_URL}/post?cat=${category}&page=${page}&writerId=${writerId || ""}`);
 
         setPosts(data?.data || [])
         setNumOfPages(data?.numOfPages)
